@@ -1,0 +1,33 @@
+name: Accessibility CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  axe:
+    name: Run axe-core accessibility checks
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Start server and run axe
+        run: |
+          npm start &
+          npx wait-on http://localhost:3000 --timeout 30000
+          npx @axe-core/cli http://localhost:3000 --exit
