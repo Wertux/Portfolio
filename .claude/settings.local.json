@@ -4,7 +4,16 @@
       "mcp__figma-console__figma_list_open_files",
       "mcp__figma-console__figma_get_file_data",
       "mcp__figma-console__figma_take_screenshot",
-      "mcp__figma-console__figma_get_component_details"
+      "mcp__figma-console__figma_get_component_details",
+      "Bash(grep -v \"^migrating$\")",
+      "Bash(grep -v \"^testing$\")",
+      "Bash(grep -v \"^upgrading$\")",
+      "Bash(npm install:*)",
+      "Bash(npm view:*)",
+      "Bash(npm run:*)",
+      "Bash(git checkout:*)",
+      "Bash(git add:*)",
+      "Bash(git reset:*)"
     ]
   }
 }
