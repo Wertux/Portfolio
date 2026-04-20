@@ -3,6 +3,12 @@
 @import "../tokens/typography.css";
 @import "../tokens/spacing.css";
 
+.dot-grid {
+  background-color: #ffffff;
+  background-image: radial-gradient(circle, #a6c2af 1.5px, transparent 1.5px);
+  background-size: 28px 28px;
+}
+
 @theme inline {
   /* Colors */
   --color-background: var(--color-background);
