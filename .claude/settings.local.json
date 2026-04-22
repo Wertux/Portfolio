@@ -13,7 +13,10 @@
       "Bash(npm run:*)",
       "Bash(git checkout:*)",
       "Bash(git add:*)",
-      "Bash(git reset:*)"
+      "Bash(git reset:*)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(kill 660)",
+      "Bash(xargs kill *)"
     ]
   }
 }
