@@ -18,7 +18,11 @@
       "Bash(kill 660)",
       "Bash(xargs kill *)",
       "Bash(grep -v \"^$\")",
-      "Bash(xargs ls *)"
+      "Bash(xargs ls *)",
+      "Bash(sed -i '' 's/^slug: swiyu$/slug: swiyu\\\\nhidden: false/' /Users/luca.filoni/Portfolio/src/content/projects/swiyu.mdx)",
+      "Bash(sed -i '' 's/^slug: blick$/slug: blick\\\\nhidden: false/' /Users/luca.filoni/Portfolio/src/content/projects/blick.mdx)",
+      "Bash(sed -i '' 's/^slug: bit-sedex$/slug: bit-sedex\\\\nhidden: false/' /Users/luca.filoni/Portfolio/src/content/projects/bit-sedex.mdx)",
+      "Bash(sed -i '' 's/^slug: biso$/slug: biso\\\\nhidden: false/' /Users/luca.filoni/Portfolio/src/content/projects/biso.mdx)"
     ]
   }
 }
