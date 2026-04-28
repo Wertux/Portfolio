@@ -8,6 +8,10 @@ export interface Project {
   years: string;
   thumbnail: string;
   slug: string;
+  role?: string;
+  timeframe?: string;
+  team?: string;
+  focus?: string;
 }
 
 function parseFrontmatter(raw: string): Record<string, unknown> {

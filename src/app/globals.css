@@ -3,6 +3,10 @@
 @import "../tokens/typography.css";
 @import "../tokens/spacing.css";
 
+.project-content h2 {
+  margin-top: 80px;
+}
+
 .dot-grid {
   background-color: #f5f5f5;
   background-image: radial-gradient(circle, #a6c2af 1.5px, transparent 1.5px);
