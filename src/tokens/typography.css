@@ -11,4 +11,29 @@
 
   --font-weight-regular: 400;
   --font-weight-bold: 700;
+
+  /*
+   * Fluid type scale — Utopia-style clamp()
+   * Viewport range: 375px → 1440px
+   * Formula: clamp(min, intercept + slope·vw, max)
+   *
+   * Step       375px   1440px
+   * ────────── ─────── ───────
+   * --fluid-xs    11      13
+   * --fluid-sm    13      15
+   * --fluid-base  15      17
+   * --fluid-md    18      24
+   * --fluid-lg    22      32
+   * --fluid-xl    28      42
+   * --fluid-2xl   36      56
+   * --fluid-3xl   40      72
+   */
+  --fluid-xs:   clamp(0.6875rem, 0.6439rem + 0.1878vw, 0.8125rem);
+  --fluid-sm:   clamp(0.8125rem, 0.7689rem + 0.1878vw, 0.9375rem);
+  --fluid-base: clamp(0.9375rem, 0.8935rem + 0.1878vw, 1.0625rem);
+  --fluid-md:   clamp(1.125rem,  0.9929rem + 0.5634vw, 1.5rem);
+  --fluid-lg:   clamp(1.375rem,  1.1549rem + 0.9390vw, 2rem);
+  --fluid-xl:   clamp(1.75rem,   1.4418rem + 1.3146vw, 2.625rem);
+  --fluid-2xl:  clamp(2.25rem,   1.8099rem + 1.8779vw, 3.5rem);
+  --fluid-3xl:  clamp(2.5rem,    1.7958rem + 3.0047vw, 4.5rem);
 }

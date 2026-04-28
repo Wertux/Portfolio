@@ -28,7 +28,11 @@ function parseFrontmatter(raw: string): Record<string, unknown> {
     const key = line.slice(0, colon).trim();
     const value = line.slice(colon + 1).trim();
 
-    if (value.startsWith("[")) {
+    if (value === "true") {
+      result[key] = true;
+    } else if (value === "false") {
+      result[key] = false;
+    } else if (value.startsWith("[")) {
       try {
         result[key] = JSON.parse(value);
       } catch {

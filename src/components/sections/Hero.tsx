@@ -5,7 +5,7 @@ export function Hero() {
       className="h-screen overflow-hidden flex items-center justify-center px-6 relative"
     >
       <div className="flex flex-col items-center gap-6 max-w-[1144px] w-full">
-        <p className="text-[24px] leading-[32px] text-center">
+        <p className="text-center" style={{ fontSize: "var(--fluid-md)", lineHeight: 1.4 }}>
           <span
             style={{
               fontFamily: "var(--font-plus-jakarta-sans)",
@@ -36,8 +36,10 @@ export function Hero() {
         </p>
 
         <h1
-          className="text-[72px] leading-[86px] text-center w-full"
+          className="text-center w-full"
           style={{
+            fontSize: "var(--fluid-3xl)",
+            lineHeight: 1.1,
             fontFamily: "var(--font-plus-jakarta-sans)",
             fontWeight: 800,
             color: "#1A211B",
@@ -47,8 +49,10 @@ export function Hero() {
         </h1>
 
         <p
-          className="text-[17px] leading-[28px] text-center max-w-[600px]"
+          className="text-center max-w-[600px]"
           style={{
+            fontSize: "var(--fluid-base)",
+            lineHeight: 1.7,
             fontFamily: "var(--font-inter)",
             fontWeight: 400,
             color: "#6B6B6B",
