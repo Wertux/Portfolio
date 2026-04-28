@@ -21,7 +21,7 @@ export const WithLink: Story = {
   args: {
     title: "Sedex",
     tags: ["UX Design", "SaaS"],
-    href: "/case-studies/sedex",
+    href: "/projects/sedex",
   },
 };
 
@@ -30,6 +30,6 @@ export const WithThumbnail: Story = {
     title: "Blick.ch",
     thumbnail: "/images/placeholder.jpg",
     tags: ["UX Design", "Media"],
-    href: "/case-studies/blick",
+    href: "/projects/blick",
   },
 };

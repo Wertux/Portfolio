@@ -6,7 +6,7 @@ export function ProjectCard({ project }: { project: Project }) {
 
   return (
     <Link
-      href={`/case-studies/${slug}`}
+      href={`/projects/${slug}`}
       className="group flex w-full max-w-[800px] h-[200px] rounded-2xl overflow-hidden bg-white shadow-[0_2px_12px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_24px_rgba(0,0,0,0.1)] transition-shadow"
       aria-label={title}
     >
