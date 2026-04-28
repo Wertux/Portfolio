@@ -13,6 +13,7 @@ export interface Project {
   team?: string;
   focus?: string;
   protected?: boolean;
+  hidden?: boolean;
 }
 
 function parseFrontmatter(raw: string): Record<string, unknown> {
@@ -53,7 +54,7 @@ export function getProjects(): Project[] {
       const raw = fs.readFileSync(path.join(dir, file), "utf-8");
       return parseFrontmatter(raw) as unknown as Project;
     })
-    .filter((p): p is Project => Boolean(p.slug && p.title))
+    .filter((p): p is Project => Boolean(p.slug && p.title) && !p.hidden)
     .sort((a, b) => endYear(b.years) - endYear(a.years));
 }
 

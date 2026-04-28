@@ -3,9 +3,74 @@ title: "Trust Badges — swiyu"
 subtitle: "Designing a three-dimensional trust model for Switzerland's digital identity wallet"
 tags: ["UX Research", "Interaction Design", "Government", "Identity"]
 years: "2025"
-thumbnail: ""
-slug: "swiyu-trust-badges"
+thumbnail: /images/swiyu-trust-badges.png
+slug: swiyu-trust-badges
 protected: true
+hidden: true
 ---
 
-Case study content coming soon.
+How do you make a technical trust model legible to everyday citizens — and get two government bodies to agree on what "trusted" means?
+
+## Context
+
+Switzerland's digital identity wallet gives citizens a way to hold and share verified credentials on their phone — the digital equivalent of presenting an ID card, a driving licence, or a professional certification. But unlike a physical document with a familiar government logo, a digital credential comes from an issuer. And the fundamental question a citizen needs to answer before they share anything is: *can I trust this party?*
+
+The wallet's answer to that question was the trust badge — a visual indicator shown against every issuer and verifier in the system. My work was to define what trust means in this context, design how it is communicated, and align the stakeholders responsible for the underlying trust framework on a design they could all support.
+
+## The challenge
+
+The trust model I had to design for had three distinct dimensions, each with its own states and edge cases.
+
+**Registry status** — is this issuer or verifier registered in the official trust registry at all? An unregistered party could still appear in the wallet flow. Four possible status indicators covered the range of states.
+
+**Trust statement** — is this party legitimately authorised to request or issue the specific type of credential they're asking about? Being registered and verified doesn't mean they have the right to request your medical records. Four statement types defined the scope of authorisation.
+
+**Warning** — parties could be reported, flagged for harmful or non-compliant behaviour, adding a safety-critical layer to the model. Each issuer or verifier carries exactly one status, and may carry one statement and one warning alongside it.
+
+The design challenge wasn't how to display a badge. It was how to help a citizen make a meaningful decision from a three-dimensional trust model they had no prior framework for.
+
+Running alongside the design problem was a political one. Three parties — fedpol, the Department of Justice, and the project team within BIT — each had different views on what should be surfaced, how prominently, and in what language. Any design that didn't account for all three perspectives wouldn't get built.
+
+## Research
+
+I ran three rounds of research over the course of the project, reaching 124 people in total.
+
+The first was five discovery interviews to understand existing mental models around digital trust. From those findings I moved into iterative testing: a second round of 57 unmoderated usability tests via Maze, followed by a third round combining 58 unmoderated sessions with four in-person interviews — the latter giving me the richer qualitative signal I needed to resolve ambiguities the remote tests couldn't settle.
+
+What I found was that most people do not reason about trust hierarchically. They look for a single, clear signal — a tick, a logo, a name they recognise — and make a binary judgment. The three-dimensional model that made sense to the legal and technical architects of the system was not the model citizens arrived at naturally.
+
+That insight shaped every design decision that followed: the interface needed to project a usable summary while preserving access to the underlying detail for those who wanted it.
+
+Wording proved as consequential as visual design. After working closely with the Department of Justice on how trust language could and couldn't legally be framed, I tested two distinct wording directions with users. The results informed the final copy as much as the visual iterations did.
+
+## Design
+
+I ideated across around five concept directions before aligning on one approach to refine — a decision made collaboratively with developers and stakeholders to ensure what we designed could actually be built.
+
+The final design used multiple trust badges, each corresponding to a dimension of the trust model, surfaced at the point in the flow where a citizen encounters an issuer or verifier. The default view presents a readable summary state — enough for a confident decision in the common case. Tapping any badge reveals the detail behind it: what the dimension means, what the party's current status is, and what it implies.
+
+This approach resolved the core tension between simplicity and completeness. Citizens who want a quick answer get it without friction. Citizens who want to understand more — or who encounter an unfamiliar party — can access the full picture without leaving the flow.
+
+Edge cases required particular care. An unregistered party, a non-authorised trust statement, and a reported issuer each needed a distinct visual and verbal treatment — clear enough to act on, but calibrated to avoid creating unnecessary alarm about ambiguous situations.
+
+## Stakeholder alignment
+
+Alignment involved three parties: fedpol, the Department of Justice, and the project team within BIT — each bringing a different set of priorities and constraints to the question of how trust should be communicated.
+
+Fedpol's primary concern was surfacing safety signals clearly. The government's concern was ensuring the system felt welcoming and functional, not adversarial. BIT's concern was buildability and consistency with the broader product.
+
+My role in these sessions was less about presenting designs and more about facilitating a shared definition of what the feature was actually trying to do for citizens. By bringing user research findings into the room — evidence of how citizens actually respond to different trust signals — I was able to shift the conversation from opinion to observable behaviour.
+
+The outcome was a compromise that all parties could support, with an explicit agreement to monitor real-world usage and revisit specific decisions once implementation data was available. Rather than treating that as a failure to reach a perfect solution, the team framed it as a principled commitment to iteration — a first version designed to learn from.
+
+## Outcome & reflection
+
+The feature was handed off after eight weeks of active design work across four sprints — a timeline that included three rounds of user research (124 participants total), cross-departmental stakeholder alignment across three government bodies, and developer collaboration on what was technically feasible within the first release.
+
+The wallet is being built for Switzerland's entire population. Every trust signal I designed would eventually be seen by millions of people making real decisions about sharing their personal data — a scope that made getting the model right matter far beyond the product itself.
+
+Looking back, the most significant part of this work wasn't any individual design choice. It was the process of establishing a shared language for trust across a diverse group of stakeholders — technical, legal, political, and citizen-facing — and translating that shared language into a design that felt simple enough to use without losing the precision the system required.
+
+If I were to continue this work, the first question I'd want to answer with real data is whether citizens who encounter a non-fully-trusted party act differently than those who only see trusted parties — and whether the badge design gives them enough to make that decision confidently.
+
+{/* TODO before publishing: confirm participant numbers, internal stakeholder names, and wallet name are cleared for public portfolio */}

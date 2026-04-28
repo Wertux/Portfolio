@@ -30,7 +30,7 @@ export default async function ProjectPage({ params }: PageParams) {
     { label: "Timeframe", value: project?.timeframe },
     { label: "Team", value: project?.team },
     { label: "Focus", value: project?.focus },
-  ];
+  ].filter((card) => Boolean(card.value));
 
   return (
     <>
@@ -59,7 +59,7 @@ export default async function ProjectPage({ params }: PageParams) {
         </header>
 
         {/* Metadata strip */}
-        <div className="grid grid-cols-4 gap-4 mb-20">
+        {metadataCards.length > 0 && <div className="grid grid-cols-4 gap-4 mb-20">
           {metadataCards.map(({ label, value }) => (
             <div
               key={label}
@@ -80,7 +80,7 @@ export default async function ProjectPage({ params }: PageParams) {
               </p>
             </div>
           ))}
-        </div>
+        </div>}
 
         {/* MDX content */}
         <div className="project-content pb-24">
