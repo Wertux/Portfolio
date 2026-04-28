@@ -16,7 +16,9 @@
       "Bash(git reset:*)",
       "mcp__Claude_Preview__preview_start",
       "Bash(kill 660)",
-      "Bash(xargs kill *)"
+      "Bash(xargs kill *)",
+      "Bash(grep -v \"^$\")",
+      "Bash(xargs ls *)"
     ]
   }
 }

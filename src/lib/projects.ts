@@ -12,6 +12,7 @@ export interface Project {
   timeframe?: string;
   team?: string;
   focus?: string;
+  protected?: boolean;
 }
 
 function parseFrontmatter(raw: string): Record<string, unknown> {
