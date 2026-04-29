@@ -40,16 +40,22 @@ export default async function ProjectPage({ params }: PageParams) {
         {/* Page header */}
         <header className="pt-12 pb-10">
           <h1
-            className="text-[48px] leading-tight font-bold text-[#1A211B] line-clamp-2"
-            style={{ fontFamily: "var(--font-plus-jakarta-sans)" }}
+            className="font-bold text-[#1A211B] line-clamp-2"
+            style={{
+              fontFamily: "var(--font-plus-jakarta-sans)",
+              fontSize: "var(--fluid-2xl)",
+              lineHeight: 1.15,
+            }}
           >
             {project?.title ?? slug}
           </h1>
           {project?.subtitle && (
             <p
-              className="mt-3 text-[16px] leading-relaxed text-[#6B6B6B]"
+              className="mt-3 text-[#6B6B6B]"
               style={{
                 fontFamily: "var(--font-inter)",
+                fontSize: "var(--fluid-base)",
+                lineHeight: 1.6,
                 maxWidth: "55%",
               }}
             >
@@ -67,14 +73,14 @@ export default async function ProjectPage({ params }: PageParams) {
             >
               <div className="w-8 h-8 rounded-md bg-[#E8E8E8] mb-3" />
               <p
-                className="text-[11px] text-[#9E9E9E] uppercase tracking-wide"
-                style={{ fontFamily: "var(--font-inter)" }}
+                className="text-[#9E9E9E] uppercase tracking-wide"
+                style={{ fontFamily: "var(--font-inter)", fontSize: "var(--fluid-xs)" }}
               >
                 {label}
               </p>
               <p
-                className="text-[14px] font-medium text-[#1A211B] mt-1"
-                style={{ fontFamily: "var(--font-inter)" }}
+                className="font-medium text-[#1A211B] mt-1"
+                style={{ fontFamily: "var(--font-inter)", fontSize: "var(--fluid-sm)" }}
               >
                 {value ?? "—"}
               </p>
