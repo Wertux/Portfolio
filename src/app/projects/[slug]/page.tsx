@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ProjectNav } from "@/components/layout/ProjectNav";
 import { getProjects } from "@/lib/projects";
+import { MetaCard, type MetaCardVariant } from "@/components/ui/MetaCard";
 
 interface PageParams {
   params: Promise<{ slug: string }>;
@@ -65,28 +66,18 @@ export default async function ProjectPage({ params }: PageParams) {
         </header>
 
         {/* Metadata strip */}
-        {metadataCards.length > 0 && <div className="grid grid-cols-4 gap-4 mb-20">
-          {metadataCards.map(({ label, value }) => (
-            <div
-              key={label}
-              className="bg-white rounded-xl p-4 shadow-[0_1px_4px_rgba(0,0,0,0.06),0_4px_16px_rgba(0,0,0,0.04)]"
-            >
-              <div className="w-8 h-8 rounded-md bg-[#E8E8E8] mb-3" />
-              <p
-                className="text-[#9E9E9E] uppercase tracking-wide"
-                style={{ fontFamily: "var(--font-inter)", fontSize: "var(--fluid-xs)" }}
-              >
-                {label}
-              </p>
-              <p
-                className="font-medium text-[#1A211B] mt-1"
-                style={{ fontFamily: "var(--font-inter)", fontSize: "var(--fluid-sm)" }}
-              >
-                {value ?? "—"}
-              </p>
-            </div>
-          ))}
-        </div>}
+        {metadataCards.length > 0 && (
+          <div className="grid grid-cols-4 gap-4 mb-20">
+            {metadataCards.map(({ label, value }) => (
+              <MetaCard
+                key={label}
+                label={label}
+                value={value ?? "—"}
+                variant={slug as MetaCardVariant}
+              />
+            ))}
+          </div>
+        )}
 
         {/* MDX content */}
         <div className="project-content pb-24">

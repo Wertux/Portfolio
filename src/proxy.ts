@@ -5,7 +5,7 @@ import {
   verifyToken,
   isCodeValid,
   COOKIE_NAME,
-} from "@/lib/case-study-access";
+} from "@/lib/project-access";
 
 export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;

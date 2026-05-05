@@ -19,7 +19,7 @@ function UnlockForm() {
     setLoading(true);
 
     try {
-      const res = await fetch("/api/auth/case-study", {
+      const res = await fetch("/api/auth/project", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ code, slug }),
@@ -79,7 +79,7 @@ function UnlockForm() {
         className="rounded-lg bg-[#1A211B] px-4 py-3 text-[14px] font-semibold text-white transition-opacity hover:opacity-80 disabled:opacity-40"
         style={{ fontFamily: "var(--font-inter)" }}
       >
-        {loading ? "Verifying…" : "Unlock case study"}
+        {loading ? "Verifying…" : "Unlock project"}
       </button>
 
       <p
@@ -110,13 +110,13 @@ export default function UnlockPage() {
               className="text-[22px] font-bold text-[#1A211B] leading-snug"
               style={{ fontFamily: "var(--font-plus-jakarta-sans)" }}
             >
-              Protected case study
+              Protected project
             </h1>
             <p
               className="mt-1.5 text-[14px] text-[#6B6B6B] leading-relaxed"
               style={{ fontFamily: "var(--font-inter)" }}
             >
-              This case study requires an access code. Enter yours below.
+              This project requires an access code. Enter yours below.
             </p>
           </div>
 

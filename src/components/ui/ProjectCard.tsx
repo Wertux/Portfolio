@@ -57,7 +57,7 @@ export function ProjectCard({ project }: { project: Project }) {
             className="text-[13px] text-[#1A211B] font-medium group-hover:underline"
             style={{ fontFamily: "var(--font-inter)" }}
           >
-            View Case Study →
+            View Project →
           </span>
           <span
             className="text-[13px] text-[#6B6B6B]"

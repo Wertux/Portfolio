@@ -17,11 +17,11 @@ export const ACCESS_CODES: AccessCode[] = [
 
 export const PROTECTED_SLUGS = ["swiyu-trust-badges"];
 
-export const COOKIE_NAME = "cs_access";
+export const COOKIE_NAME = "project_access";
 
 async function getKey(): Promise<CryptoKey> {
-  const secret = process.env.CASE_STUDY_SECRET;
-  if (!secret) throw new Error("CASE_STUDY_SECRET is not set");
+  const secret = process.env.PROJECT_SECRET;
+  if (!secret) throw new Error("PROJECT_SECRET is not set");
   return crypto.subtle.importKey(
     "raw",
     new TextEncoder().encode(secret),

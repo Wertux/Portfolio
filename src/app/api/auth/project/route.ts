@@ -1,5 +1,5 @@
 import { cookies } from "next/headers";
-import { isCodeValid, signToken, COOKIE_NAME } from "@/lib/case-study-access";
+import { isCodeValid, signToken, COOKIE_NAME } from "@/lib/project-access";
 
 export async function POST(request: Request) {
   const { code, slug } = await request.json();
